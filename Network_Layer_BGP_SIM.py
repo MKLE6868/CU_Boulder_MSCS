@@ -1,11 +1,3 @@
-# Task: Create some functions for a simplified BGP router
-#   Specifically, the withdraw, update, and next_hop functions of the Router
-#   The class Route will be used.
-# 
-#   withdraw(rt) - rt is type Route. If a simplified BGP router gets this message, it will   
-#
-
-
 class Route:
     # A prefix is in form 
     neighbor = ""  # The router that send this router - will be a.b.c.d
@@ -200,13 +192,7 @@ def test_cases():
     rtr.withdraw(Route("1.1.1.1", "20.0.12.0", 24, [44,55,66,77,88]))
     nh = rtr.next_hop("20.0.12.0")
     assert nh == "2.2.2.2"
-
-
-
-
-
-
-
+    
 
 if __name__ == "__main__":
     test_cases()
